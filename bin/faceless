@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+// jshint node: true
+'use strict';
+
+var nopt = require('nopt');
+var Faceless = require('../src/faceless');
+
+var args = nopt();
+
+new Faceless(args);
