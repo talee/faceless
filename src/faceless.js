@@ -6,7 +6,8 @@ function Faceless(opts) {
 }
 
 Faceless.prototype = {
-
+  process: function(file, cb) {
+  }
 };
 
 module.exports = Faceless;
