@@ -4,7 +4,8 @@
   "description": "Converts JSF apps to Web Components",
   "main": "src/faceless.js",
   "scripts": {
-    "test": "jshint --verbose src/*.js bin/* test/*.js && node_modules/.bin/mocha"
+    "test": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/index.js src/**/*.js bin/* test/*.js && node_modules/.bin/mocha",
+	"test:watch": "node_modules/.bin/chokidar \"{src,test}/**/*.js\" -c 'npm test'"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,19 @@
   },
   "homepage": "https://github.com/talee/faceless#readme",
   "devDependencies": {
+    "chokidar-cli": "^0.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-mocha": "^2.1.1",
+    "gulp-util": "^3.0.5",
     "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.0",
+    "lazypipe": "^0.2.3",
     "mocha": "^2.2.5"
   },
   "dependencies": {
+    "dom5": "^1.1.0",
+    "gulp": "^3.9.0",
     "nopt": "^3.0.2",
     "parse5": "^1.4.2"
   }
