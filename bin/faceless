@@ -6,5 +6,13 @@ var nopt = require('nopt');
 var Faceless = require('../src/faceless');
 
 var args = nopt();
+var target = args.argv.remain[0];
 
-new Faceless(args);
+var faceless = new Faceless(args);
+faceless.process(target, function (err, result) {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+  console.log(result);
+});
