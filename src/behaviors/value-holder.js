@@ -15,6 +15,7 @@ ValueHolder.prototype =  {
   REPLACE_START_KEY: '{{', 
   REPLACE_END_KEY: '}}',   
 
+  // TODO: Move out to EL expression rewriter?
   /**
    * @param {Node} node A DOM Node
    * @return {Node}

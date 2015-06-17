@@ -29,7 +29,7 @@ function rewrite(node) {
     return node;
   }
   node.attrs.forEach(function(attr) { 
-    var Behavior = behaviors[attr];
+    var Behavior = behaviors[attr.name];
     if (!Behavior) {
       return;
     }
