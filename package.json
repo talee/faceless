@@ -27,13 +27,8 @@
   "homepage": "https://github.com/talee/faceless#readme",
   "devDependencies": {
     "chokidar-cli": "^0.2.1",
-    "gulp-jshint": "^1.11.0",
-    "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-mocha": "^2.1.1",
-    "gulp-util": "^3.0.5",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.0",
-    "lazypipe": "^0.2.3",
     "mocha": "^2.2.5"
   },
   "dependencies": {
