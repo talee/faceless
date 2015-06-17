@@ -7,13 +7,13 @@ var dom5 = require('dom5');
 function ValueHolder() {
 }
 
-var START_KEY = '#{';
-var END_KEY = '}';
-
-var REPLACE_START_KEY = '{{';
-var REPLACE_END_KEY = '}}';
-
 ValueHolder.prototype =  {
+
+  START_KEY: '#{',
+  END_KEY: '}',
+
+  REPLACE_START_KEY: '{{', 
+  REPLACE_END_KEY: '}}',   
 
   /**
    * @param {Node} node A DOM Node
@@ -24,8 +24,9 @@ ValueHolder.prototype =  {
     if (!valueAttr) {
       return node;
     }
-    valueAttr.value = valueAttr.value.replace(START_KEY, REPLACE_START_KEY)
-        .replace(END_KEY, REPLACE_END_KEY);
+    valueAttr.value = valueAttr.value.replace(this.START_KEY,
+        this.REPLACE_START_KEY)
+        .replace(this.END_KEY, this.REPLACE_END_KEY);
     return node;
   }
 };

@@ -2,7 +2,7 @@
 'use strict';
 
 var fs = require('fs');
-//var behaviors = require('./behaviors/behaviors');
+var behaviors = require('./behaviors/behaviors');
 var tags = require('./tags/tags');
 var dom5 = require('dom5');
 
@@ -28,6 +28,13 @@ function rewrite(node) {
   if (!dom5.isElement(node)) {
     return node;
   }
+  node.attrs.forEach(function(attr) { 
+    var Behavior = behaviors[attr];
+    if (!Behavior) {
+      return;
+    }
+    new Behavior().rewrite(node);
+  });
   var Rewriter = tags[node.tagName.toLowerCase()];
   if (!Rewriter) {
     // No handler found

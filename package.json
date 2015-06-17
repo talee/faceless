@@ -5,7 +5,7 @@
   "main": "src/faceless.js",
   "bin": "bin/faceless",
   "scripts": {
-    "test": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/index.js src/**/*.js bin/* test/*.js && node_modules/.bin/mocha",
+    "test": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/index.js {src,test}/**/*.js bin/* && node_modules/.bin/mocha test/{**,**/*}.js",
     "test:watch": "node_modules/.bin/chokidar \"{src,test}/**/*.js\" \"bin/*\" -c 'npm test'"
   },
   "repository": {
