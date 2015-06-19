@@ -34,7 +34,6 @@
   "dependencies": {
     "dom5": "^1.1.0",
     "es6-promise": "^2.3.0",
-    "gulp": "^3.9.0",
     "nopt": "^3.0.2",
     "parse5": "^1.4.2"
   }
